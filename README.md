@@ -75,7 +75,11 @@ tar -xvzf /home/user/Downloads/t-rex-*-linux.tar.gz -C /home/user/Documents/trex
 - Make sure to check the fee and the minimum payout rate or copy the ones I used (not affiliated).
 - See if it works, replace your ETH address or copy the examples for other pools and coins.
 ```bash
+# Ethereum
 /home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6 -p x -w partytime
+
+# Ravencoin
+/home/user/Documents/trex/t-rex -a kawpow -o stratum+tcp://stratum.ravenminer.com:3838 -u RUNRDmHxd5Z63tncKpC1LcfPNfj6KTraCV.partytime -p x
 ```
 - Go to `ethermine.org` in your browser and type in your wallet.
 - You should see it mining after 10 or so minutes.
@@ -155,9 +159,12 @@ tmux new-session -d -s trex
 # Change partytime to whatever you want your mining rig to be called
 
 # Ethereum (check with ethermine.org to set correct region)
-tmux send-keys -t trex "/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6 -p x -w partytime" C-m
+# Uncomment the one you want
+#tmux send-keys -t trex "/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6 -p x -w partytime" C-m
 
-# Other Cryptos to come
+# Ravencoin
+tmux send-keys -t trex "/home/user/Documents/trex/t-rex -a kawpow -o stratum+tcp://stratum.ravenminer.com:3838 -u RUNRDmHxd5Z63tncKpC1LcfPNfj6KTraCV.partytime -p x" C-m
+
 ```
 - Save and Exit
 - Make the file executable
