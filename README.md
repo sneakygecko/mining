@@ -98,7 +98,7 @@ sudo reboot now
 nvidia-smi
 sudo nvidia-smi -pm 1
 # Ravencoin
-sudo nvidia-smi -pl 150
+sudo nvidia-smi -pl 145
 # Ethereum
 #sudo nvidia-smi -pl 115
 nvidia-smi
@@ -145,7 +145,10 @@ export DISPLAY=:0.0
 sudo nvidia-smi -pm 1
 
 # Set your card to use 115W instead of 250W, this works for my 3070. DANGER DO YOUR RESEARCH
-sudo nvidia-smi -pl 115
+# Ravencoin
+sudo nvidia-smi -pl 145
+# Ethereum
+#sudo nvidia-smi -pl 115
 
 # Overclock your card DANGER DO YOUR RESEARCH, this works for my 3070.
 # Might have to change the [4]s to [3]s
