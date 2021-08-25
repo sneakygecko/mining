@@ -75,7 +75,7 @@ tar -xvzf /home/user/Downloads/t-rex-*-linux.tar.gz -C /home/user/Documents/trex
 - Make sure to check the fee and the minimum payout rate or copy the ones I used (not affiliated).
 - See if it works, replace your ETH address or copy the examples for other pools and coins.
 ```bash
-/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x6DC006DDEE5d582cE2b840735aBf8Ab16889bE55 -p x -w partytime
+/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6 -p x -w partytime
 ```
 - Go to `ethermine.org` in your browser and type in your wallet.
 - You should see it mining after 10 or so minutes.
@@ -155,7 +155,7 @@ tmux new-session -d -s trex
 # Change partytime to whatever you want your mining rig to be called
 
 # Ethereum (check with ethermine.org to set correct region)
-tmux send-keys -t trex "/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x6DC006DDEE5d582cE2b840735aBf8Ab16889bE55 -p x -w partytime" C-m
+tmux send-keys -t trex "/home/user/Documents/trex/t-rex -a ethash -o stratum+tcp://asia1.ethermine.org:4444 -u 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6 -p x -w partytime" C-m
 
 # Other Cryptos to come
 ```
@@ -210,11 +210,10 @@ tmux a
 - You can ssh to it with `ssh user@192.168.1.3`
 - Have fun.
 
-## If this helped you can tip me some of your minings :)
-- Bitcoin:
-- Ethereum:
-- Ethereum Classic:
-- Ravencoin:
+## If this helped you, can tip me some of your minings :)
+- Bitcoin: 1L6E9FQg2FkWytRQreCtF6LBcQGVeYnHgV
+- Ethereum: 0x24f7aA60065fc3E2E8681eBc46e0733CF18B35d6
+- Ravencoin: RUNRDmHxd5Z63tncKpC1LcfPNfj6KTraCV
 
 
 
