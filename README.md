@@ -97,7 +97,10 @@ sudo reboot now
 ```bash
 nvidia-smi
 sudo nvidia-smi -pm 1
-sudo nvidia-smi -pl 115
+# Ravencoin
+sudo nvidia-smi -pl 150
+# Ethereum
+#sudo nvidia-smi -pl 115
 nvidia-smi
 ```
 - You should be able to see that the power level in `nvidia-smi` changed to 115
@@ -107,7 +110,7 @@ nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=
 ```
 - Overclock your GPU, you might have to change the `[4]`s to `[3]`s
 ```bash
-nvidia-settings -c :0 -a '[gpu:0]/GPUGraphicsClockOffset[4]=0' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=1200'
+nvidia-settings -c :0 -a '[gpu:0]/GPUGraphicsClockOffset[4]=-300' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=1250'
 ```
 - Any overclocking settings are lost after reboot.
 
@@ -147,7 +150,7 @@ sudo nvidia-smi -pl 115
 # Overclock your card DANGER DO YOUR RESEARCH, this works for my 3070.
 # Might have to change the [4]s to [3]s
 # Might be able to push your card more with -500, 1500 ... DO AT OWN RISK
-nvidia-settings -c :0 -a '[gpu:0]/GPUGraphicsClockOffset[4]=0' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=1200'
+nvidia-settings -c :0 -a '[gpu:0]/GPUGraphicsClockOffset[4]=-300' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=1250'
 
 # Set the fan speed. 50% keeps my gpu under 60C. Under 70C should be ok.
 nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50"
